@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype HTML>
+<html>
+    <head>
+        <!-- ここにcssかく -->
+        <link rel="stylesheet" href="{% static 'main.css' %}">
+    </head>
+    <body>
+        <!-- ここに実際に見せるものを書く -->
+        {% include "_navbar.html" %}
+
+        {% block main %}
+        コンテンツがありません。
+        {% endblock %}
+
+        {% include "_footer.html" %}
+    </body>
+</html>
+
+<!--head     文書のヘッダ部分を指定
+    body     文書の本体部分を指定
+    h1～h6   見出しを指定（h1が一番大きい見出し）
+    div      ある部分をグループ化してCSSでレイアウトを変えたい
+    a href   <a href="リンク先のＵＲＬ">アンカーテキスト</a>   -->
+
+{% comment %} {%タグ付け%} {% endcomment %}
